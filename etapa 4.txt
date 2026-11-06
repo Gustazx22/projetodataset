@@ -1,13 +1,13 @@
 Coluna ou situação		O que discutir
-children		O que fazer com os 4 valores ausentes?
+children		        O que fazer com os 4 valores ausentes?
 
-country			Preencher os 488 ausentes ou manter como desconhecido?
+country			        Preencher os 488 ausentes ou manter como desconhecido?
 
-agent			Como tratar os 16.340 valores ausentes?
+agent			        Como tratar os 16.340 valores ausentes?
 
-company			Manter, remover ou criar uma categoria para os ausentes?
+company			        Manter, remover ou criar uma categoria para os ausentes?
 
-adr			    Como tratar valores negativos e valores muito altos?
+adr			            Como tratar valores negativos e valores muito altos?
 
 Reservas sem hóspedes	Devemos mantê-las ou excluí-las?
 
