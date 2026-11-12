@@ -57,3 +57,10 @@ booking_changes	            0	        Máximo 21	Útil, mas depende do momento d
 days_in_waiting_list	    0	        Máximo 391	Pode ser útil
 required_car_parking_spaces	0	        Máximo 8	Útil
 total_of_special_requests	0	        Máximo 5	Muito útil
+
+
+modelo logistico e o que vamos usar
+Scikit-learn biblioteca que precisa baixar para criar o modelo logistico 
+1. Tratar o dataset (2 novos dataset, um com os dados de treinamento e outro com os dados de validação)
+2. . Escolher o modelo de rede neural para responder a perguntas
+3. Usar as tabelas junto com o modelo de rede neural para responder a pergunta
