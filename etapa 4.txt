@@ -1,14 +1,59 @@
-Coluna ou situação		O que discutir
-children		        O que fazer com os 4 valores ausentes?
+Coluna	    Ausentes	Valores incorretos ou suspeitos	Avaliação
+hotel	    0	        Nenhum identificado	Útil
+lead_time	0	        Nenhum negativo; máximo 737 dias	Muito útil
+arrival_date_year	0	Anos entre 2015 e 2017	Útil
+arrival_date_month	0	12 meses identificados	Útil
+arrival_date_week_number	0	Sem valores fora de 1–53	Útil
+arrival_date_day_of_month	0	Dias entre 1 e 31	Útil
+stays_in_weekend_nights	0	Nenhum negativo; máximo 19	Útil
+stays_in_week_nights	0	Nenhum negativo; máximo 50	Útil
 
-country			        Preencher os 488 ausentes ou manter como desconhecido?
+oberservções sobre essas colunas
 
-agent			        Como tratar os 16.340 valores ausentes?
+lead_time pode ser especialmente importante, 
+pois já observamos que reservas canceladas apresentam maior antecedência média.
 
-company			        Manter, remover ou criar uma categoria para os ausentes?
+Encontramos 715 reservas com zero noites. 
+Todas também apresentam adr igual a zero. 
+É um padrão que merece investigação, mas não podemos afirmar que sejam erros automaticamente.
 
-adr			            Como tratar valores negativos e valores muito altos?
+Coluna	Ausentes	Valores incorretos ou suspeitos	Avaliação
+adults	0	403 reservas com zero adultos; 12 com mais de 10	Útil, investigar extremos
+children	4	Nenhum negativo	Útil
+babies	0	Nenhum negativo	Útil
+country	488 (0,41%)	Nenhum erro específico identificado	Útil
+is_repeated_guest	0	Apenas 0 e 1	Muito útil
+previous_cancellations	0	Máximo 26	Muito útil
+previous_bookings_not_canceled	0	Máximo 72	Muito útil
+customer_type	0	4 categorias identificadas	Útil
 
-Reservas sem hóspedes	Devemos mantê-las ou excluí-las?
+children: existem apenas 4 ausentes, uma quantidade muito pequena.
+country: existem 488 ausentes, mas isso representa somente 0,41%.
+adults: encontramos 12 reservas com mais de 10 adultos. 
+Todas são do tipo Group, no Resort Hotel, e estão canceladas. 
+Portanto, não devemos tratá-las automaticamente como erros.
+Também encontramos 180 reservas sem adultos, crianças ou bebês. 
+Precisamos avaliar esse padrão antes de decidir qualquer tratamento.
 
-Reservas sem noites	    Como interpretar esses registros
+
+Coluna	Ausentes	Valores incorretos ou suspeitos	Avaliação
+meal	0	Categoria Undefined	Útil
+market_segment	0	Categoria Undefined	Muito útil
+distribution_channel	0	Categoria Undefined	Útil
+reserved_room_type	0	10 categorias	Útil
+deposit_type	0	3 categorias	Muito útil
+agent	16.340 (13,69%)	333 códigos diferentes	Útil, com ressalvas
+company	112.593 (94,31%)	Grande quantidade de ausentes	Pouco recomendada
+adr	0	1 negativo e 3 acima de 500	Útil, investigar extremos
+
+market_segment é interessante porque já identificamos diferenças nas taxas de cancelamento entre segmentos.
+deposit_type também merece atenção, pois representa o tipo de depósito exigido na reserva.
+agent possui 13,69% de ausentes. É uma coluna que pode ajudar, mas seus valores são códigos identificadores, não quantidades.
+company tem 94,31% de ausentes. Não recomendo incluí-la inicialmente.
+adr apresenta quatro valores que merecem investigação:
+
+Coluna	                   Ausentes	    Valores incorretos ou suspeitos	Avaliação
+booking_changes	            0	        Máximo 21	Útil, mas depende do momento da previsão
+days_in_waiting_list	    0	        Máximo 391	Pode ser útil
+required_car_parking_spaces	0	        Máximo 8	Útil
+total_of_special_requests	0	        Máximo 5	Muito útil
